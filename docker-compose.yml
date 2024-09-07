@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  backend:
+    image: adarsh0427/new_manage_backend
+    container_name: docker_manager_backend
+    ports:
+      - "5001:5001"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  frontend:
+    image: adarsh0427/new_manage_frontend
+    container_name: docker_manager_frontend
+    ports:
+      - "3000:3000"
